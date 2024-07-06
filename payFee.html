@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="home.css">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .form {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 500px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        .form-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="Header">
+        <img src="./Head.png" alt="Header">
+    </div>
+    <div class="container">
+
+        <div class="header">
+            <div class="home">Home</div>
+            <div class="control-panel">
+                <div class="dropdown">
+                    <button class="dropbtn">Control Panel▾</button>
+                    <div class="dropdown-content">
+                        <a href="/email.html">GNDEC E-Mail Credentials</a>
+                        <a href="/viewDetails.html">View Detail</a>
+                        <a href="#">Generate Exam Admit Card</a>
+                        <a href="/skill.html">Skill Enhancement Courses</a>
+                        <a href="/detainee.html">Detainee Subject(s) - Theory</a>
+                        <a href="./ParticalDetainee.html">Detainee Subject(s) - Practical</a>
+                        <a href="/examForm.html">Exam Form Reappear</a>
+                        <a href="/endSemsterform.html">Exam Form Status</a>
+                        <a href="/resultsemNov.html">Result: ESE Nov, 2023</a>
+                        <a href="/resultSemMay.html">Result: ESE May, 2024</a>
+                        <a href="#">View Elective Allotment</a>
+                    </div>
+                </div>
+            </div>
+            <div class="pay-fee">
+                <a href="#" class="dropbtn">Pay Semester Fee (July-Dec, 2024)</a>
+            </div>
+            <div class="obe">
+                <div class="dropdown">
+                    <button class="dropbtn">OBE▾</button>
+                    <div class="dropdown-content">
+                        <a href="#">Vision, Mission, PEO's,PO's</a>
+                        <a href="#">Course Outcomes</a>
+                        <a href="#">FAQ</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="student-id">
+                <div class="dropdown">
+                    <button class="dropbtn">2314067▾</button>
+                    <div class="dropdown-content">
+                        <a href="#">Change Password</a>
+                        <button id="logout">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <form class="form">
+            <h2>Fill Detail</h2>
+            <div class="form-group">
+                <label class="form-label">Hostler / Day Scholar</label>
+                <select class="form-input">
+                    <option value="Day Scholar">Day Scholar</option>
+                    <option value="Hostler">Hostler</option>
+                </select>
+                <p>Please select Hostler / Day Scholar carefully.</p>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Mode of Payment</label>
+                <select class="form-input">
+                    <option value="Online">Online (Credit, Debit Card, UPI, Netbanking)</option>
+                </select>
+            </div>
+            <p>I hereby certify that the entries made by me in this form are correct to the best of my knowledge and I
+                have not suppressed any information in any manner.</p>
+            <button class="form-button">Proceed</button>
+        </form>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script>
+        // Logout functionality
+        document.getElementById("logout").addEventListener("click", function () {
+            localStorage.removeItem("isLoggedIn");
+            window.location.href = "index.html"; // Change this to your login page URL
+        });
+
+        // Check login status on page load
+        window.addEventListener("load", function () {
+            if (localStorage.getItem("isLoggedIn") !== "true") {
+                window.location.href = "index.html"; // Change this to your login page URL
+            }
+        });
+    </script>
+</body>
+
+</html>

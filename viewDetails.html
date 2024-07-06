@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information</title>
+    <link rel="stylesheet" href="home.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .header {
+            width: 100%;
+            background-color: #e8e8e8;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 30px;
+            box-sizing: border-box;
+            flex-wrap: wrap;
+            /* Allow wrapping on smaller screens */
+        }
+
+        .pay-fee a {
+            text-decoration: none;
+        }
+
+        .home,
+        .control-panel,
+        .pay-fee,
+        .obe,
+        .student-id {
+            border-radius: 5px;
+            margin: 5px 0;
+            /* Added margin for better spacing on smaller screens */
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            background-color: #f7f7f7;
+            /* Light grey */
+            color: black;
+            padding: 10px 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            padding: 10px;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            background-color: #f44336;
+            /* Red */
+            font-size: 12px;
+            color: black;
+            padding: 3px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #bd473f;
+            /* Darker red */
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #d9534f;
+            /* Light red */
+        }
+
+        .Detail_container {
+            width: 60%;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #f8f8f8;
+            box-sizing: border-box;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px;
+            background-color: #fff;
+        }
+
+        th,
+        td {
+            font-size: 11px;
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
+
+        th {
+            font-size: 11px;
+            background-color: #f0f0f0;
+            width: 30%;
+        }
+
+        .note,
+        .disclaimer {
+            font-size: 11px;
+            padding: 10px;
+            margin: 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            body {
+                margin: 0;
+                padding: 10px;
+            }
+
+            .header {
+                flex-direction: column;
+                padding: 10px 5px;
+            }
+
+            .home {
+                width: 100%;
+                text-align: center;
+                margin: 5px 0;
+            }
+
+            .dropdown {
+                width: 100%;
+                margin: 5px 0;
+            }
+
+            .dropdown .dropbtn {
+                width: 100%;
+                text-align: left;
+                box-sizing: border-box;
+                padding-left: 20px;
+            }
+
+            .dropdown-content {
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .Detail_container {
+                width: 90%;
+                margin: 20px auto;
+            }
+
+            table {
+                margin: 5px;
+            }
+
+            th,
+            td {
+                font-size: 14px;
+                padding: 8px;
+            }
+
+            .note,
+            .disclaimer {
+                font-size: 12px;
+                padding: 8px;
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="Header">
+        <img src="./Head.png" alt="Header">
+    </div>
+    <div class="container">
+
+        <div class="header">
+            <div class="home">Home</div>
+            <div class="control-panel">
+                <div class="dropdown">
+                    <button class="dropbtn">Control Panel▾</button>
+                    <div class="dropdown-content">
+                        <a href="/email.html">GNDEC E-Mail Credentials</a>
+                        <a href="/viewDetails.html">View Detail</a>
+                        <a href="#">Generate Exam Admit Card</a>
+                        <a href="/skill.html">Skill Enhancement Courses</a>
+                        <a href="/detainee.html">Detainee Subject(s) - Theory</a>
+                        <a href="./ParticalDetainee.html">Detainee Subject(s) - Practical</a>
+                        <a href="/examForm.html">Exam Form Reappear</a>
+                        <a href="/endSemsterform.html">Exam Form Status</a>
+                        <a href="/resultsemNov.html">Result: ESE Nov, 2023</a>
+                        <a href="/resultSemMay.html">Result: ESE May, 2024</a>
+                        <a href="#">View Elective Allotment</a>
+                    </div>
+                </div>
+            </div>
+            <div class="pay-fee">
+                <a href="#" class="dropbtn">Pay Semester Fee (July-Dec, 2024)</a>
+            </div>
+            <div class="obe">
+                <div class="dropdown">
+                    <button class="dropbtn">OBE▾</button>
+                    <div class="dropdown-content">
+                        <a href="#">Vision, Mission, PEO's,PO's</a>
+                        <a href="#">Course Outcomes</a>
+                        <a href="#">FAQ</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="student-id">
+                <div class="dropdown">
+                    <button class="dropbtn">2315231▾</button>
+                    <div class="dropdown-content">
+                        <a href="#">Change Password</a>
+                        <button id="logout">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <div class="Detail_container">
+        <table>
+            <tr>
+                <th>Name / Gender</th>
+                <td>Priyanshu / Male</td>
+            </tr>
+            <tr>
+                <th>Father's Name</th>
+                <td>Kaushal Kumar</td>
+            </tr>
+            <tr>
+                <th>Mother's Name</th>
+                <td>Anita</td>
+            </tr>
+            <tr>
+                <th>University Roll No. / Section (Group)</th>
+                <td>2302409 / CEBECC (CEB1)</td>
+            </tr>
+            <tr>
+                <th>Program / Semester / Shift</th>
+                <td>B.Tech. (Civil Engineering) / 2 / First</td>
+            </tr>
+            <tr>
+                <th>Mobile No. / Personal E-mail ID</th>
+                <td>9024579103 / kpanditf62@gmail.com</td>
+            </tr>
+            <tr>
+                <th>Mentor Name</th>
+                <td>Sukhwinderpal Singh</td>
+            </tr>
+            <tr>
+                <th>College Roll No.</th>
+                <td>2314067</td>
+            </tr>
+            <tr>
+                <th>Date of Birth (YYYY-MM-DD)</th>
+                <td>2003-06-26</td>
+            </tr>
+        </table>
+        <div class="note">
+            <strong>Note:</strong>
+            <ul>
+                <li>In case of discrepancy (with regards to Roll No.(s), spelling mistakes in name (s)), contact
+                    immediately your department office.</li>
+            </ul>
+        </div>
+        <div class="disclaimer">
+            <strong>Disclaimer:</strong> Every effort has been made to verify the contents of this website. However,
+            Guru Nanak Dev Engineering College, Ludhiana is not liable for any action based on such information.
+        </div>
+    </div>
+</body>
+
+</html>

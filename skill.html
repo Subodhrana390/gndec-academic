@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="home.css">
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            background-color: #fff;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+            font-size: 12px;
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .header {
+            width: 100%;
+            background-color: #e8e8e8;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 30px;
+            box-sizing: border-box;
+            flex-wrap: wrap;
+            /* Allow wrapping on smaller screens */
+        }
+
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            body {
+                margin: 0;
+                padding: 10px;
+            }
+
+            .header {
+                flex-direction: column;
+                padding: 10px 5px;
+            }
+
+            .home {
+                width: 100%;
+                text-align: center;
+                margin: 5px 0;
+            }
+
+
+            table,
+            th,
+            td {
+                font-size: 14px;
+                padding: 8px;
+            }
+
+            th,
+            td {
+                font-size: 12px;
+                padding: 8px;
+            }
+
+            th,
+            td {
+                padding: 5px;
+                font-size: 11px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+
+            table,
+            th,
+            td {
+                font-size: 12px;
+                padding: 8px;
+            }
+
+            th,
+            td {
+                padding: 5px;
+                font-size: 11px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="Header">
+        <img src="./Head.png" alt="Header">
+    </div>
+    <div class="container">
+
+        <div class="header">
+            <div class="home">Home</div>
+            <div class="control-panel">
+                <div class="dropdown">
+                    <button class="dropbtn">Control Panel▾</button>
+                    <div class="dropdown-content">
+                        <a href="/email.html">GNDEC E-Mail Credentials</a>
+                        <a href="/viewDetails.html">View Detail</a>
+                        <a href="#">Generate Exam Admit Card</a>
+                        <a href="/skill.html">Skill Enhancement Courses</a>
+                        <a href="/detainee.html">Detainee Subject(s) - Theory</a>
+                        <a href="./ParticalDetainee.html">Detainee Subject(s) - Practical</a>
+                        <a href="/examForm.html">Exam Form Reappear</a>
+                        <a href="/endSemsterform.html">Exam Form Status</a>
+                        <a href="/resultsemNov.html">Result: ESE May, 2024</a>
+                        <a href="#">View Elective Allotment</a>
+                    </div>
+                </div>
+            </div>
+            <div class="pay-fee">
+                <a href="#" class="dropbtn">Pay Semester Fee (July-Dec, 2024)</a>
+            </div>
+            <div class="obe">
+                <div class="dropdown">
+                    <button class="dropbtn">OBE▾</button>
+                    <div class="dropdown-content">
+                        <a href="#">Vision, Mission, PEO's,PO's</a>
+                        <a href="#">Course Outcomes</a>
+                        <a href="#">FAQ</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="student-id">
+                <div class="dropdown">
+                    <button class="dropbtn">2315231▾</button>
+                    <div class="dropdown-content">
+                        <a href="#">Change Password</a>
+                        <a href="#">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+    <h2>List of Skill Enhancement Courses</h2>
+
+    <table>
+        <tr>
+            <th>Sr No.</th>
+            <th>Code</th>
+            <th>Course Title</th>
+            <th>Important Information</th>
+            <th>Remarks</th>
+            <th>Action</th>
+            <th>Registration Fee</th>
+        </tr>
+
+    </table>
+    <p style="color:red;">For any Technical Issue send email at technicalsupport(AT)gndec.ac.in (Replace (AT) with @)
+        with complete details like Roll No., Name, Mobile etc.</p>
+
+</body>
+
+</html>

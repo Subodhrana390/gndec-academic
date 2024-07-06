@@ -1,0 +1,164 @@
+/* General Styles */
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 10px; /* Adjusted for smaller screens */
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  background-color: #e8e8e8;
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px; /* Adjusted for smaller screens */
+  box-sizing: border-box;
+}
+
+.pay-fee a {
+  text-decoration: none;
+}
+
+.home,
+.control-panel,
+.pay-fee,
+.obe,
+.student-id {
+  border-radius: 5px;
+  margin: 5px 0; /* Added margin for better spacing on smaller screens */
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #f7f7f7; /* Light grey */
+  color: black;
+  padding: 10px 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  padding: 10px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  background-color: #f44336; /* Red */
+  font-size: 12px;
+  color: black;
+  padding: 3px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: block;
+  margin: 10px 0;
+}
+
+.dropdown-content a:hover {
+  background-color: #bd473f; /* Darker red */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #d9534f; /* Light red */
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  /* Tablet styles */
+  .header {
+    padding: 10px 5px;
+  }
+  .home {
+    width: 50%;
+    margin: 5px 0;
+  }
+  .dropdown {
+    width: 50%;
+    margin: 5px 0;
+  }
+  .dropdown .dropbtn {
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+    padding-left: 20px;
+  }
+  .dropdown-content {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile styles */
+  body {
+    margin: 0; /* Remove margin for mobile */
+    padding: 0; /* Remove padding for mobile */
+  }
+  .header {
+    flex-direction: column;
+    padding: 10px 5px;
+  }
+  .home {
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+  }
+  .dropdown {
+    width: 100%;
+    margin: 5px 0;
+  }
+  .dropdown .dropbtn {
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+    padding-left: 20px;
+  }
+  .dropdown-content {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Small mobile styles */
+  .header {
+    padding: 5px 5px;
+  }
+  .home {
+    font-size: 14px;
+  }
+  .dropdown .dropbtn {
+    font-size: 14px;
+  }
+  .dropdown-content a {
+    font-size: 10px;
+  }
+}

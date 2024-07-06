@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GNDEC E-Mail Login Credentials</title>
+    <link rel="stylesheet" href="home.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Header Image */
+        #Header img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        .header {
+            background-color: #f8f8f8;
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .header>div {
+            margin: 5px 0;
+        }
+
+        .header .home {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown .dropbtn {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #0056b3;
+        }
+
+        /* Email Container */
+        .email_container {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+
+        .email_container .header {
+            background-color: #f8f8f8;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .email_container table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .email_container th,
+        .email_container td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .email_container th {
+            background-color: #f0f0f0;
+            width: 25%;
+        }
+
+        .email_container a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .email_container a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .header .home {
+                text-align: center;
+                width: 100%;
+            }
+
+            .dropdown {
+                width: 100%;
+            }
+
+            .dropdown .dropbtn {
+                width: 100%;
+                text-align: left;
+                box-sizing: border-box;
+                padding-left: 20px;
+            }
+
+            .dropdown-content {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="Header">
+        <img src="./Head.png" alt="Header">
+    </div>
+    <div class="container">
+
+        <div class="header">
+            <div class="home">Home</div>
+            <div class="control-panel">
+                <div class="dropdown">
+                    <button class="dropbtn">Control Panel▾</button>
+                    <div class="dropdown-content">
+                        <a href="/email.html">GNDEC E-Mail Credentials</a>
+                        <a href="/viewDetails.html">View Detail</a>
+                        <a href="#">Generate Exam Admit Card</a>
+                        <a href="/skill.html">Skill Enhancement Courses</a>
+                        <a href="/detainee.html">Detainee Subject(s) - Theory</a>
+                        <a href="./ParticalDetainee.html">Detainee Subject(s) - Practical</a>
+                        <a href="/examForm.html">Exam Form Reappear</a>
+                        <a href="/endSemsterform.html">Exam Form Status</a>
+                        <a href="/resultsemNov.html">Result: ESE May, 2024</a>
+                        <a href="#">View Elective Allotment</a>
+                    </div>
+                </div>
+            </div>
+            <div class="pay-fee">
+                <a href="#" class="dropbtn">Pay Semester Fee (July-Dec, 2024)</a>
+            </div>
+            <div class="obe">
+                <div class="dropdown">
+                    <button class="dropbtn">OBE▾</button>
+                    <div class="dropdown-content">
+                        <a href="#">Vision, Mission, PEO's,PO's</a>
+                        <a href="#">Course Outcomes</a>
+                        <a href="#">FAQ</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="student-id">
+                <div class="dropdown">
+                    <button class="dropbtn">2315231▾</button>
+                    <div class="dropdown-content">
+                        <a href="#">Change Password</a>
+                        <a href="#">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+    <div class="email_container">
+        <div class="header">
+            GNDEC E-Mail Login Credentials (Updated)
+        </div>
+        <table>
+            <tr>
+                <th>Login URL</th>
+                <td><a href="https://mail.gndec.ac.in">Log into GNDEC E-Mail Client</a></td>
+            </tr>
+            <tr>
+                <th>Important Advisory</th>
+                <td>
+                    The college is issuing an official e-mail id to you. Kindly change your password on the first
+                    login
+                    by using the settings option.
+                    Keep a secure password of at least 8 characters having alphabets, numerical and special
+                    characters.
+                    It is the sole responsibility
+                    of the student that your e-mail id should not be misused, so never share your password with
+                    anyone.
+                    This e-mail id will be
+                    automatically deleted when you have completed your stipulated degree duration. So you must
+                    export
+                    the valuable data if any,
+                    before your final examinations of the course. You are also advised to adhere to the rules and
+                    regulations of the institute
+                    and further advisories issued from time to time. The college is not liable for any illegal and
+                    unconstitutional activity
+                    initiated from your e-mail id as this e-mail id is for academic purposes only. For any technical
+                    problem related to GNDEC
+                    Email-ID contact at: info@gndec.ac.in
+                </td>
+            </tr>
+            <tr>
+                <th>E-Mail ID</th>
+                <td>priyanshu_2314067@gndec.ac.in</td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td>PriyanshuG+2314067*</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
